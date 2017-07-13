@@ -1,38 +1,23 @@
 ---
-title: Hello World
+title: Hello again
 ---
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
+### 前沿
+作为程序员的悲哀，大家以我为鉴。
 
-## Quick Start
-
-### Create a new post
-
-``` bash
-$ hexo new "My New Post"
+### 缘由
+使用vim莫名的创建一个“～”的文件夹，就想着删除它，执行代码：
 ```
-
-More info: [Writing](https://hexo.io/docs/writing.html)
-
-### Run server
-
-``` bash
-$ hexo server
+rm ~
 ```
-
-More info: [Server](https://hexo.io/docs/server.html)
-
-### Generate static files
-
-``` bash
-$ hexo generate
+发现居然删不了，果断换成：
 ```
-
-More info: [Generating](https://hexo.io/docs/generating.html)
-
-### Deploy to remote sites
-
-``` bash
-$ hexo deploy
+rm -rf ~
 ```
+然后就是输入权限密码，然后就悲剧了，事情的结果是我的整个根目录几乎被删除殆尽。
 
-More info: [Deployment](https://hexo.io/docs/deployment.html)
+### 亡羊补牢
+在mac中 “～”表示home目录，如果直接删除名为“～”的目录，相当于删除整个home目录下的所有文件（这也是为什么要管理员权限的原因），几乎无论这个“～”在什么位置都不要直接删除它。
+如果非要删除，该怎么办呢？答案是使用绝对路径，比如我将“～”创建在了*“/home/afei/Desktop/”*下，那么执行下列命令即可：
+```
+rm -rf /home/afei/Desktop/～
+```
