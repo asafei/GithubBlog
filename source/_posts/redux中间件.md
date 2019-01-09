@@ -417,7 +417,7 @@ componentDidMount(){
 
 redux的中间件指的是action和store之间，thunk就是对store的dispatch方法做了一个升级，之前的是只能接受一个对象，现在可以接收一个函数，当接受一个函数时先执行函数再分发
 
-![](/Users/Afei/Documents/文章/js/img/redux-data-flow.png)
+{% asset_img redux-data-flow.png redux-data-flow流程图 %}
 
 ### 九、Redux-saga中间件
 

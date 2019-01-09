@@ -13,34 +13,33 @@ tags: React
 
 4、给详情页面添加redux
 
-> * 在detail文件夹下创建store文件夹，并在里面创建actionCreators.js、constants.js、index.js、reducer.js
->
-> * 在reducer.js中添加defaultState	,需要将带html标签的内容全部包进去
->
-> * 在src/store/reducer.js中，引入详情页的reducer
->
-> * 在detail的index.js中引入reducer，并展示内容，注意当需要展示带有html标签内容时需要使用`dangerouslySetInnerHTML`
->
->   ```<DetailContent dangerouslySetInnerHTML={{__html:this.props.content}}>
->   //在DetailContent组件中展示html格式的内容
->   <DetailContent dangerouslySetInnerHTML={{__html:this.props.content}}>
->   </DetailContent>
->   ```
->
-> * 用活数据代替死数据，componentDidMount触发请求行为，在actionCreators中引入axios发送请求
->
-> * 通过路由，点击不通的item，实现不同详情页的跳转
->
->   > 两种方式：
->   >
->   > * 动态路由
->   >
->   >   在home的List页面中，将`<Link key={index} to='/detail'>`改为`<Link key={index} to={'/detail/'+item.get('id')}>`
->   >
->   >   进入APP.js，为了匹配所有的detail，将`<Route path='/detail' exact component={Detail}></Route>`改为`<Route path='/detail/:id' exact component={Detail}></Route>`
->   >
->   >   在detail的index.js页面获取页面ID `this.props.match.params.id`,传递给getDetail方法
+ * 在detail文件夹下创建store文件夹，并在里面创建actionCreators.js、constants.js、index.js、reducer.js
 
+ * 在reducer.js中添加defaultState	,需要将带html标签的内容全部包进去
+
+ * 在src/store/reducer.js中，引入详情页的reducer
+
+ * 在detail的index.js中引入reducer，并展示内容，注意当需要展示带有html标签内容时需要使用`dangerouslySetInnerHTML`
+
+   ```javascript
+   <DetailContent dangerouslySetInnerHTML={{__html:this.props.content}}>
+   //在DetailContent组件中展示html格式的内容
+   <DetailContent dangerouslySetInnerHTML={{__html:this.props.content}}>
+   </DetailContent>
+   ```
+
+ * 用活数据代替死数据，componentDidMount触发请求行为，在actionCreators中引入axios发送请求
+
+ * 通过路由，点击不通的item，实现不同详情页的跳转
+
+
+两种方式：
+**动态路由**
+ * 在home的List页面中，将`<Link key={index} to='/detail'>`改为`<Link key={index} to={'/detail/'+item.get('id')}>`
+ 
+ * 进入APP.js，为了匹配所有的detail，将`<Route path='/detail' exact component={Detail}></Route>`改为`<Route path='/detail/:id' exact component={Detail}></Route>`
+ 
+ * 在detail的index.js页面获取页面ID `this.props.match.params.id`,传递给getDetail方法
 
 
 
