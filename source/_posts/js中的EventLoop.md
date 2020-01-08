@@ -78,7 +78,7 @@ console.log(5);
 
 正确答案是：2-5-3-4-1
 
-网上有更多的联系题，可以自己去看看。本文讲到这里
+网上有更多的练习题，可以自己去看看。本文讲到这里
 
 #### 四、其它
 
@@ -89,4 +89,5 @@ console.log(5);
 [<http://www.ruanyifeng.com/blog/2014/10/event-loop.html>](<http://www.ruanyifeng.com/blog/2014/10/event-loop.html>)
 
 [<https://blog.csdn.net/qq_41805715/article/details/84849280>](<https://blog.csdn.net/qq_41805715/article/details/84849280>)
+[https://blog.csdn.net/u014298440/article/details/88430838](https://blog.csdn.net/u014298440/article/details/88430838)
 
